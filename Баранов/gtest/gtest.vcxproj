@@ -11,16 +11,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\base\queue.h" />
     <ClInclude Include="..\gtest\gtest.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\base\queue.cpp" />
-    <ClCompile Include="..\gtest\gtest-all.cc" />
+    <ClCompile Include="..\gtest\gtest-all.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </AdditionalIncludeDirectories>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{60932AFC-7808-48B7-B3BF-F2BC151C0065}</ProjectGuid>
     <RootNamespace>gtest</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -68,6 +72,8 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
