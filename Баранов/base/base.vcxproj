@@ -81,13 +81,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="queue.cpp" />
-    <ClCompile Include="cpu.cpp" />
     <ClCompile Include="system.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="queue.h" />
-    <ClInclude Include="cpu.h" />
-    <ClInclude Include="system.h" />
+    <ClInclude Include="task.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

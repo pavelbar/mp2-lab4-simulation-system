@@ -14,6 +14,7 @@
     <ClInclude Include="..\gtest\gtest.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\base\queue.cpp" />
     <ClCompile Include="..\gtest\gtest-all.cc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
