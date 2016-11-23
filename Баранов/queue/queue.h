@@ -1,34 +1,34 @@
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
 
-#include <iostream>  //debug
-using namespace std; //debug
-#include <locale>    //debug
+#include <iostream>  
+using namespace std; 
+#include <locale>    
 
 const unsigned int MaxSize = 100;
 template <class T>
 class Queue
 {
 private:
-    T *TMEM;            // указатель на очередь
-    T *TMEMTMP;         // указатель на tmp
-    int size;           // размер очереди
-    int begin;          // начало очереди
-    int end;            // конец очереди
-    int count;          // счетчик элементов
+    T *TMEM;            
+    T *TMEMTMP;         
+    int size;          
+    int begin;          
+    int end;            
+    int count;         
 public:
-    Queue(int = MaxSize);         // конструктор по умолчанию
-    Queue(const Queue<T> & val);  // конструктор копирования
-    ~Queue();                     // деструктор
-    bool IsEmpty();               // очередь пуста
-    bool IsFull();                // очередь полна
-    void enqueue(const T &val);   // добавить элемент в в конец очереди
-    T dequeue();                  // взять первый элемент из очереди
-    void printQueue();            //debug       
+    Queue(int = MaxSize);         
+    Queue(const Queue<T> & val);  
+    ~Queue();                    
+    bool IsEmpty();               
+    bool IsFull();                
+    void enqueue(const T &val);   
+    T dequeue();                 
+    void printQueue();         
 };
 
 
-template <class T>// конструктор по умолчанию
+template <class T>
 Queue<T>::Queue(int sizeQueue)
 {
     if ((sizeQueue<1) || (sizeQueue>MaxSize)) throw (sizeQueue);
@@ -40,7 +40,7 @@ Queue<T>::Queue(int sizeQueue)
     TMEMTMP = new T[1];
 }
 
-template <class T>// конструктор копиирования
+template <class T>
 Queue<T>::Queue(const Queue &otherQueue)
 {
     size = otherQueue.size;
@@ -52,7 +52,7 @@ Queue<T>::Queue(const Queue &otherQueue)
         TMEM[i] = otherQueue.TMEM[i]; 
 }
 
-template <class T>// деструктор 
+template <class T>
 Queue<T>::~Queue()
 {
     delete[] TMEM;
@@ -61,19 +61,19 @@ Queue<T>::~Queue()
     TMEMTMP = NULL;
 }
 
-template <class T>// очередь пуста
+template <class T>
 bool Queue<T>::IsEmpty()
 {
     return(count == 0);
 }
 
-template <class T>// очередь полна
+template <class T>
 bool Queue<T>::IsFull()
 {
     return (count == size);
 }
 
-template <class T>//добавить элемент в в конец очереди
+template <class T>
 void Queue<T>::enqueue(const T &newElem)
 {
     if (IsFull())  throw (count);
@@ -85,7 +85,7 @@ void Queue<T>::enqueue(const T &newElem)
         end = end - size + 1; 
 }
 
-template <class T>// взять первый элемент из очереди
+template <class T>
 T Queue<T>::dequeue()
 {
     if (IsEmpty()) throw (count);
@@ -97,7 +97,7 @@ T Queue<T>::dequeue()
     return TMEMTMP[0];
 }
 
-template<typename T>//debug
+template<typename T>
 void Queue<T>::printQueue()
 {
     cout << endl << "Очередь: " << endl;
