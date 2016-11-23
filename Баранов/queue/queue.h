@@ -1,4 +1,4 @@
-#ifndef __QUEUE_H__
+ï»¿#ifndef __QUEUE_H__
 #define __QUEUE_H__
 
 #include <iostream>  
@@ -93,16 +93,16 @@ T Queue<T>::dequeue()
     begin++;
     count--;
     if (begin > size)
-        begin -= size + 1; 
+        begin = begin - size + 1;
     return TMEMTMP[0];
 }
 
 template<typename T>
 void Queue<T>::printQueue()
 {
-    cout << endl << "Î÷åðåäü: " << endl;
+    cout << endl << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ: " << endl;
     if (count == 0 )
-        cout << " ïóñòàÿ\n";
+        cout << " Ð¿ÑƒÑÑ‚Ð°Ñ\n";
     else
     {
         int tmp = count;

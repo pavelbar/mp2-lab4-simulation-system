@@ -1,4 +1,4 @@
-#include "queue.h"
+﻿#include "queue.h"
 
 
 int main()
@@ -22,6 +22,24 @@ int main()
     v.printQueue();
 
     v.enqueue(2);
+    v.printQueue();
+
+    v.dequeue();
+    v.printQueue();
+
+    v.enqueue(2);
+    v.printQueue();
+
+    v.dequeue();
+    v.printQueue();
+
+    v.enqueue(2);
+    v.printQueue();
+
+    v.dequeue();
+    v.printQueue();
+   
+    v.dequeue();
     v.printQueue();
     //--
     return 0;
