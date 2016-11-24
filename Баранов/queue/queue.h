@@ -24,7 +24,8 @@ public:
     bool IsFull();                
     void enqueue(const T &val);   
     T dequeue();                 
-    void printQueue();         
+    void printQueue();        
+    int get_size();
 };
 
 
@@ -97,7 +98,7 @@ T Queue<T>::dequeue()
     return TMEMTMP[0];
 }
 
-template<typename T>
+template<typename T>//debug
 void Queue<T>::printQueue()
 {
     cout << endl << "Очередь: " << endl;
@@ -116,5 +117,8 @@ void Queue<T>::printQueue()
         cout << endl;
     }
 }
+
+template <class T>
+int Queue<T>::get_size(){ return count;}
 
 #endif 
