@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ABD876D0-80AD-4EA6-9A3D-FB220EF65CDE}</ProjectGuid>
+    <ProjectGuid>{5A843E42-296C-478D-8834-F2B3DE78A57B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>task</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -101,6 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../queue</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,6 +146,7 @@
     <ClInclude Include="task.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="debug_task.cpp" />
     <ClCompile Include="task.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

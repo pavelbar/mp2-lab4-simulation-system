@@ -16,6 +16,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="debug_queue.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
     <ClCompile Include="queue.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>

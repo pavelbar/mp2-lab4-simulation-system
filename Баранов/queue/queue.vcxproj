@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0DC370BB-AC6D-4A0C-85C7-EDB972020A01}</ProjectGuid>
+    <ProjectGuid>{3A42C778-FAAF-4F9D-8A02-247214EA9E70}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>queue</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -105,8 +105,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -147,6 +145,7 @@
     <ClInclude Include="queue.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="debug_queue.cpp" />
     <ClCompile Include="queue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

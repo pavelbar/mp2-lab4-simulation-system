@@ -1,33 +1,17 @@
 #include "task.h"
-#include <iostream>  
-using namespace std;
+#include "queue.h"
 
-int main()
-{
-    //debug zone
-    Task t(5);
-    cout << "have: " << t.show_have() << endl;
-    cout << "need: " << t.show_need() << endl << endl;
+Task::Task(unsigned int val) //создание задачи с переданным кол-вом тактов, необходимым для выполнения
+    {
 
-    t.plus();//1
-    cout << "have: " << t.show_have() << endl;
-    cout << "need: " << t.show_need() << endl << endl;
+        if ((val<1) || (val>MaxSize)) throw (val);
+        tact_need = val;
+    }
 
-    t.plus();//2
-    cout << "have: " << t.show_have() << endl;
-    cout << "need: " << t.show_need() << endl << endl;
 
-    t.plus();//3
-    cout << "have: " << t.show_have() << endl;
-    cout << "need: " << t.show_need() << endl << endl;
-
-    t.plus();//4
-    cout << "have: " << t.show_have() << endl;
-    cout << "need: " << t.show_need() << endl << endl;
-
-    t.plus();//5
-    cout << "have: " << t.show_have() << endl;
-    cout << "need: " << t.show_need() << endl << endl;
-    //--
-    return 0;
+unsigned int Task::Task::get_need() 
+{ 
+    return tact_need; 
 }
+
+
