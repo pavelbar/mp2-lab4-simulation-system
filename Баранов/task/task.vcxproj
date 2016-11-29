@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3A42C778-FAAF-4F9D-8A02-247214EA9E70}</ProjectGuid>
+    <ProjectGuid>{5A843E42-296C-478D-8834-F2B3DE78A57B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>queue</RootNamespace>
+    <RootNamespace>task</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -101,6 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../queue</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,11 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="queue.h" />
+    <ClInclude Include="task.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="debug_queue.cpp" />
-    <ClCompile Include="queue.cpp" />
+    <ClCompile Include="debug_task.cpp" />
+    <ClCompile Include="task.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
